@@ -1,6 +1,6 @@
 import 'package:a7a/lib/HomeScreen.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
+// import 'main.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -29,7 +29,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           body: Container(
             height: size.height,
             width: double.infinity,
-            child: Stack(children: []),
+            child: Stack(children: [
+              Positioned(
+                top: 0,
+                left: 0,
+                child: Image.asset('assets/imgs/main_top.png'),
+              ),
+              Center(
+                child: const Column(children: [
+                  Text(
+                    'تطبيق مستشفى الروضة ',
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.purple),
+                  ),
+                ]),
+              ),
+            ]),
           ),
         ));
   }
